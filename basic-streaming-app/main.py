@@ -1,10 +1,11 @@
 import streamlit as st
+import pandas as pd
 
 st.text("Hello World")
 
 ###
 # 
-# Give your app a title
+# App a title
 
 st.title('Cloud Gear')
 
@@ -30,10 +31,28 @@ st.text('Hello, how are you?')
 # LaTex
 st.latex("x=y * 2^2")
 
+# st.write
+st.write('Thank you for being here')
 # Divider
 st.divider()
 
-# st.write
-st.write('Thank you for being here')
+# ###
 
+
+###
+# 
+# 
+# 
+
+# df = pd.read_csv("data.csv", dtype="int")
+df = pd.read_csv("data.csv")
+
+st.dataframe(df)
+st.write(df)
+
+st.table(df)
+
+st.metric(label="Temperature", value=900, delta=20, delta_color="inverse")
+# 
+# 
 # ###
